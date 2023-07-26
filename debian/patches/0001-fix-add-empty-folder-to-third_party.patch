@@ -1,0 +1,30 @@
+From 5e0ad6d4215a5114a20e60160db4ffdebd9ec813 Mon Sep 17 00:00:00 2001
+From: bluesky <chenchongbiao@deepin.org>
+Date: Wed, 26 Jul 2023 14:29:05 +0800
+Subject: [PATCH] fix: add empty folder to third_party
+
+Add the action to create an empty folder in the rules.
+
+Issue: https://github.com/deepin-community/grpc/issues/2
+---
+ debian/rules | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+diff --git a/debian/rules b/debian/rules
+index b823946d..657ff51e 100755
+--- a/debian/rules
++++ b/debian/rules
+@@ -74,6 +74,10 @@ override_dh_auto_configure:
+ 	ln -s /usr/src/googletest/googletest/ \
+ 		$(CURDIR)/third_party/googletest/
+ 
++	mkdir -p $(CURDIR)/third_party/envoy-api
++	mkdir -p $(CURDIR)/third_party/googleapis
++	mkdir -p $(CURDIR)/third_party/xds
++
+ 	dh_auto_configure -O--buildsystem=cmake \
+ 		-O--builddir=$(BUILD_STATIC_DIR) -- \
+ 		-DBUILD_SHARED_LIBS=OFF \
+-- 
+2.33.1
+

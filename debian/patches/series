@@ -13,3 +13,4 @@ use-system-grpc.patch
 fix-protoc-path.patch
 add_grpc_libdir.patch
 link_python_all_absl.patch
+0001-fix-add-empty-folder-to-third_party.patch
