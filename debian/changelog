@@ -1,3 +1,9 @@
+grpc (1.51.1-4deepin1) unstable; urgency=medium
+
+  * add empty folder to third_party
+
+ -- bluesky <chenchongbiao@deepin.org>  Wed, 26 Jul 2023 14:35:56 +0800
+
 grpc (1.51.1-3) unstable; urgency=medium
 
   * Link Python gRPC module with all needed Abseil libraries
