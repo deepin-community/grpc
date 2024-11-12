@@ -1,8 +1,18 @@
-grpc (1.51.1-4deepin3) unstable; urgency=medium
+grpc (1.51.1-5) unstable; urgency=medium
 
-  * Rebuild against python 3.12.
+  [ Stefano Rivera <stefanor@debian.org> ]
+  * Patch: Cython 3 support.
+  * Patch: Python 3.13 support (closes: #1084603).
+  * Patch: GCC-14 support (closes: #1075045).
 
- -- Tianyu Chen <sweetyfish@deepin.org>  Mon, 08 Jul 2024 15:08:03 +0200
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Mon, 11 Nov 2024 18:25:37 +0100
+
+grpc (1.51.1-4.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Rename libraries for 64-bit time_t transition.  Closes: #1064100
+
+ -- Steve Langasek <vorlon@debian.org>  Thu, 29 Feb 2024 01:10:41 +0000
 
 grpc (1.51.1-4) unstable; urgency=medium
 
